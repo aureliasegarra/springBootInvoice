@@ -1,11 +1,13 @@
 package com.mycompany.invoice.service;
 
 import com.mycompany.invoice.entity.Invoice;
-import com.mycompany.invoice.repository.InvoiceRepository;
+import com.mycompany.invoice.repository.InvoiceRepositoryInterface;
 
-public class InvoiceService {
+public class InvoiceService implements InvoiceServiceInterface{
     private static long lastNumber = 0L;
-    private InvoiceRepository invoiceRepository = new InvoiceRepository();
+
+    // No more instantiation => no dependency
+    private InvoiceRepositoryInterface invoiceRepository;
 
     public void createInvoice(Invoice invoice){
         invoice.setNumber(String.valueOf(++lastNumber));
