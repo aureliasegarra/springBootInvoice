@@ -10,6 +10,6 @@ public class InvoiceRepository {
 
     public void create(Invoice invoice){
         invoices.add(invoice);
-        System.out.println("Invoice added with number" + invoice.getNumber() + " for " + invoice.getCustomerName());
+        System.out.println("Invoice added with number " + invoice.getNumber() + " for " + invoice.getCustomerName());
     }
 }
