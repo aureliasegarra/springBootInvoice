@@ -10,6 +10,15 @@ public class InvoiceServiceMichel implements InvoiceServiceInterface {
     // No more instantiation => no dependency
     private InvoiceRepositoryInterface invoiceRepository;
 
+
+    public InvoiceRepositoryInterface getInvoiceRepository() {
+        return invoiceRepository;
+    }
+    // Valuing all dependencies with Setters => dependency injection!
+    public void setInvoiceRepository(InvoiceRepositoryInterface invoiceRepository) {
+        this.invoiceRepository = invoiceRepository;
+    }
+
     public void createInvoice(Invoice invoice){
         invoice.setNumber(String.valueOf("INV" + (++lastNumber)));
         invoiceRepository.create(invoice);

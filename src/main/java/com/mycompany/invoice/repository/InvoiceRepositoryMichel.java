@@ -7,14 +7,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class InvoiceRepositoryMichel implements InvoiceRepositoryInterface {
-    private static List<Invoice> invoices = new ArrayList<>();
+    private static final List<Invoice> invoices = new ArrayList<>();
 
     public void create(Invoice invoice){
-        /**
-         * With JDBC
-         * PreparedStatement pstmt = connexion.prepareStatement("INSERT INTO FACTURE (NUMER, CUSTOMERNAME) VALUES (?,?)");
-         * [...]
-         * pstmt.executeUpdate();
+        /*
+          With JDBC
+          PreparedStatement pstmt = connexion.prepareStatement("INSERT INTO FACTURE (NUMER, CUSTOMERNAME) VALUES (?,?)");
+          [...]
+          pstmt.executeUpdate();
          */
     }
 }
