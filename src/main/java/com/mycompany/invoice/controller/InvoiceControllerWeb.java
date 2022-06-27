@@ -6,7 +6,7 @@ import com.mycompany.invoice.service.InvoiceServiceInterface;
 
 
 
-public class InvoiceControllerMichel implements InvoiceControllerInterface{
+public class InvoiceControllerWeb implements InvoiceControllerInterface{
 
     private InvoiceServiceInterface invoiceService;
 

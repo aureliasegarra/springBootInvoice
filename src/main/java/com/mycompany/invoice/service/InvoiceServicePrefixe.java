@@ -3,22 +3,24 @@ package com.mycompany.invoice.service;
 import com.mycompany.invoice.entity.Invoice;
 import com.mycompany.invoice.repository.InvoiceRepositoryInterface;
 
-public class InvoiceService implements InvoiceServiceInterface{
-    private static long lastNumber = 0L;
+
+public class InvoiceServicePrefixe implements InvoiceServiceInterface {
+    private static long lastNumber = 112L;
 
     // No more instantiation => no dependency
     private InvoiceRepositoryInterface invoiceRepository;
 
+
     public InvoiceRepositoryInterface getInvoiceRepository() {
         return invoiceRepository;
     }
-
+    // Valuing all dependencies with Setters => dependency injection!
     public void setInvoiceRepository(InvoiceRepositoryInterface invoiceRepository) {
         this.invoiceRepository = invoiceRepository;
     }
 
     public void createInvoice(Invoice invoice){
-        invoice.setNumber(String.valueOf(++lastNumber));
+        invoice.setNumber(String.valueOf("INV" + (++lastNumber)));
         invoiceRepository.create(invoice);
     }
 }
