@@ -1,3 +1,3 @@
-## Spring Boot Demo
+## Spring Demo
 
 ![illustration](src/main/resources/conception.png)
